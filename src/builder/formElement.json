@@ -1,0 +1,20 @@
+[
+    {
+        "form": {
+            "name": "New Form"
+        },
+        "pages": [
+            {
+                "id": 1,
+                "page": {
+                    "label": "Page 1",
+                    "placeholder": "Form Builder descripton",
+                    "bgimage": null,
+                    "opacity": 0.1,
+                    "placement": "bg-center"
+                },
+                "fields": []
+            }
+        ]
+    }
+]
