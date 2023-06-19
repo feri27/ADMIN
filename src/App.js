@@ -4,6 +4,7 @@ import Forms from "./forms/Forms";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Tables from "./tables/Tables";
 import Formbuilder from "./formbuilder/formbuilder";
+import Documents from "./documents/documents";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/builder">
           <Formbuilder/>
+        </Route>
+        <Route path="/documents">
+          <Documents/>
         </Route>
         <Redirect from="/" to="/dashboard" exact />
       </Switch>

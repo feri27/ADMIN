@@ -1,3 +1,5 @@
+import { ArrowCircleUpIcon } from "@heroicons/react/outline";
+
 function Footer(props) {
   return (
     <footer className="flex items-center justify-between px-5 h-20 bg-white flex-shrink-0 mt-auto">
@@ -9,7 +11,7 @@ function Footer(props) {
         onClick={props.onScrollTop}
         className="text-cyan-500 hover:text-cyan-700"
       >
-        Back to top
+      <ArrowCircleUpIcon className="w-8 h-8 "/>
       </a>
     </footer>
   );

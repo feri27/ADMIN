@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-import { HomeIcon, TableIcon, DocumentTextIcon, CogIcon, DocumentAddIcon } from "@heroicons/react/outline";
-import { ShieldCheckIcon } from "@heroicons/react/outline";
+import { HomeIcon, TableIcon, DocumentTextIcon, CogIcon, DocumentAddIcon ,KeyIcon, UserGroupIcon,DocumentIcon,MapIcon,IdentificationIcon,UserIcon} from "@heroicons/react/outline";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Logo from "../assets/logo.svg";
@@ -55,6 +54,27 @@ function SideMenu(props) {
         <MenuItem to="/dashboard" title="Dashboard" active={location.pathname === '/dashboard'}>
           <HomeIcon className={itemIconClass} />
         </MenuItem>
+
+        <MenuItem to="/documents" title="Clients" active={location.pathname === '/documents'}>
+          <UserIcon className={itemIconClass} />
+        </MenuItem>
+
+        <MenuItem to="/forms" title="Location" active={location.pathname === '/forms'}>
+          <MapIcon className={itemIconClass} />
+        </MenuItem>
+
+        <MenuItem to="/forms" title="Tempelate" active={location.pathname === '/forms'}>
+          <DocumentIcon className={itemIconClass} />
+        </MenuItem>
+
+        <MenuItem to="/forms" title="Contacts" active={location.pathname === '/forms'}>
+          <IdentificationIcon className={itemIconClass} />
+        </MenuItem>
+
+        <MenuItem to="/forms" title="Team" active={location.pathname === '/forms'}>
+          <UserGroupIcon className={itemIconClass} />
+        </MenuItem>
+        
         <MenuItem to="/forms" title="Forms" active={location.pathname === '/forms'}>
           <DocumentTextIcon className={itemIconClass} />
         </MenuItem>
@@ -71,6 +91,9 @@ function SideMenu(props) {
 
         <MenuItem to="/" title="Settings">
           <CogIcon className={itemIconClass} />
+        </MenuItem>
+        <MenuItem to="/forms" title="Licences" active={location.pathname === '/forms'}>
+          <KeyIcon className={itemIconClass} />
         </MenuItem>
       </ul>
     </div>
