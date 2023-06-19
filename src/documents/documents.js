@@ -22,21 +22,19 @@ function Documents() {
                     <div className="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
                         <div className="sm:flex items-center justify-between">
                             <div className="flex items-center">
-                                <a href="javascript:void(0)">
+                                
                                     <div className="py-2 px-8 bg-indigo-100 text-indigo-700 rounded-full">
                                         <p>All</p>
                                     </div>
-                                </a>
-                                <a href="javascript:void(0)">
+                               
                                     <div className="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
                                         <p>Done</p>
                                     </div>
-                                </a>
-                                <a href="javascript:void(0)">
+                               
                                     <div className="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
                                         <p>Pending</p>
                                     </div>
-                                </a>
+                               
                             </div>
                             <button onclick="popuphandler(true)" className="mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-white">Add Task</p>
@@ -123,7 +121,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 0 ? (
+                                                {show === 0 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -140,7 +138,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 0 && (
+                                                {show === 0 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -228,7 +226,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 1 ? (
+                                                {show === 1 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -245,7 +243,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 1 && (
+                                                {show === 1 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -325,7 +323,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 3 ? (
+                                                {show === 3 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -342,7 +340,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 3 && (
+                                                {show === 3 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -420,7 +418,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 4 ? (
+                                                {show === 4 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -437,7 +435,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 4 && (
+                                                {show === 4 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -529,7 +527,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 5 ? (
+                                                {show === 5 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -546,7 +544,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 5 && (
+                                                {show === 5 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -628,7 +626,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 6 ? (
+                                                {show === 6 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -645,7 +643,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 6 && (
+                                                {show === 6 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -733,7 +731,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 7 ? (
+                                                {show === 7 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -750,7 +748,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 7 && (
+                                                {show === 7 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -840,7 +838,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 8 ? (
+                                                {show === 8 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -857,7 +855,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 8 && (
+                                                {show === 8 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
@@ -945,7 +943,7 @@ function Documents() {
                                         </td>
                                         <td>
                                             <div className="relative px-5 pt-2">
-                                                {show == 9 ? (
+                                                {show === 9 ? (
                                                     <button className="focus:outline-none" onClick={() => setShow(null)}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
                                                             <path d="M4.16667 10.8332C4.62691 10.8332 5 10.4601 5 9.99984C5 9.5396 4.62691 9.1665 4.16667 9.1665C3.70643 9.1665 3.33334 9.5396 3.33334 9.99984C3.33334 10.4601 3.70643 10.8332 4.16667 10.8332Z" stroke="#9CA3AF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -962,7 +960,7 @@ function Documents() {
                                                         </svg>
                                                     </button>
                                                 )}
-                                                {show == 9 && (
+                                                {show === 9 && (
                                                     <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
                                                         <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                                                             <p>Edit</p>
