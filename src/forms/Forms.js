@@ -158,10 +158,10 @@ function Forms() {
                 Profile
               </h2>
               <img className="rounded-full w-32 h-32" src={UserAvater} alt="" />
-              <h4 className="text-lg font-medium mt-2">Mocha</h4>
+              <h4 className="text-lg font-medium mt-2">Anjar</h4>
               <div className="flex items-center text-gray-500">
                 <PhoneIcon className="w-4 h-4" />
-                <span className="text-sm ml-1">+9591234567</span>
+                <span className="text-sm ml-1">+6282273411470</span>
               </div>
               <div className="flex items-center text-gray-500">
                 <BriefcaseIcon className="w-4 h-4" />
