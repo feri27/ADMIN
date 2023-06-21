@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Tables from "./tables/Tables";
 import Formbuilder from "./formbuilder/formbuilder";
 import Documents from "./documents/documents";
+import Client from "./client/client";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/documents">
           <Documents/>
+        </Route>
+        <Route path="/client">
+          <Client/>
         </Route>
         <Redirect from="/" to="/dashboard" exact />
       </Switch>
