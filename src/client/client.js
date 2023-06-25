@@ -1,8 +1,13 @@
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 function TableHeader({ title }) {
+    
+
     return (
       <th
         scope="col"
-        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+        className=" border border-slate-300 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
       >
         {title}
       </th>
@@ -10,18 +15,24 @@ function TableHeader({ title }) {
   }
   
   function TableRow({ data }) {
+    const [show,setShow]=useState(false);
+    const toggle = () => {
+      setShow(!show)
+    }
     // let statusClass = " bg-green-100 text-green-700";
     // if (data.status === "angry") {
     // //   statusClass = " bg-red-100 text-red-700";
     // }
     return (
+      <>
       <tr>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.client_name}</td>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.parent_client}</td>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.phone}</td>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.address}</td>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.city}</td>
-        <td className="px-6 py-4 whitespace-nowrap text-sm">{data.distric}</td>
+        <td onClick={() => toggle()}>{show?<i className="fa fa-minus-circle text-yellow-400 ml-4"></i>:<i className="fa fa fa-plus-circle ml-4"></i>}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.client_name}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.parent_client}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.phone}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.address}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.city}</td>
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">{data.distric}</td>
         {/* <td className="px-6 py-4 whitespace-nowrap">
           <span
             className={
@@ -35,18 +46,47 @@ function TableHeader({ title }) {
         <td className="px-6 py-4 whitespace-nowrap text-gray-500 text-sm">
           {data.role}
         </td> */}
-        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-          <a href="!#" className="bg-cyan-100 px-3 py-2 mx-1 rounded text-cyan-600 hover:text-cyan-800">
-            Edit
+        <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm font-medium">
+          <a href="!#" className="bg-blue-500 px-3 py-2 mx-1 rounded text-white hover:bg-blue-900">
+          <i className="fa fa-pencil"></i>
           </a>
-          <a href="!#" className="bg-green-100 px-3 py-2 mx-1 rounded text-green-600 hover:text-green-800">
-            View
+          <a href="!#" className="bg-green-500 px-3 py-2 mx-1 rounded text-white hover:bg-green-900">
+          <i className="fa fa-eye"></i>
           </a>
-          <a href="!#" className="bg-red-100 px-3 py-2 mx-1 rounded text-red-600 hover:text-red-800">
-            Delete
+          <a href="!#" className="bg-red-500  px-3 py-2 mx-1 rounded text-white hover:bg-red-900">
+          <i className="fa fa-times"></i>
           </a>
         </td>
       </tr>
+      {show? <tr>
+      <td></td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+      <di className="flax flex-row" >
+      <label className="font-black text-blue-600" htmlFor="title">Prinary Contact</label>
+        <p>test</p>                          
+      </di>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+      <di className="flax flex-row" >
+      <label className="font-black text-blue-600" htmlFor="title">Title/Occupation</label>
+        <p>test</p>                          
+      </di>
+      </td>
+      <td  className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+      <di className="flax flex-row" >
+      <label className="font-black text-blue-600" htmlFor="title">Email</label>
+        <p>test</p>                          
+      </di>
+      </td>
+      <td colSpan={4} className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+      <di className="flax flex-row" >
+        <label className="font-black text-blue-600" htmlFor="title">Contact Person</label>
+        <p>test</p>                          
+      </di>
+      </td>
+      </tr>:null}
+      
+      </>
     );
   }
   
@@ -70,21 +110,27 @@ function TableHeader({ title }) {
       }
      
     ];
+    const history = useHistory();
   
     return (
-      <div className="flex flex-col space-y-2">
-        <h2 className="font-medium text-2xl py-5">Clients</h2>
-        <div className="flex flex-row bg-gray-50 rounded-b-md px-5 py-4">
-              <input
+      <div className="flex flex-col space-y-2 bg-gray-50 rounded px-4 r py-4">
+        
+        <div className="flex flex-row px-1 py-4 items-center justify-between ">
+        
+              <button onClick={()=> history.push("/add-client")}
                 type="submit"
-                className='px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md'
-                value="+"
-              />
-            </div>
-        <div className="shadow overflow-x-auto rounded-md">
+                className='float-right  text-cyan-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700'
+                
+              ><i className='fa fa-plus'></i> Add client</button>
+              
+              <h4 className="font-medium text-cyan-900 py-1">Client overview</h4>
+              
+        </div>
+        <div className="shadow ounded-b-md overflow-x-auto rounded-md">
           <table className="min-w-full divide-y">
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-100">
               <tr>
+                <th></th>
                 <TableHeader title="Client Name" />
                 <TableHeader title="Parent Client" />
                 <TableHeader title="Phone" />

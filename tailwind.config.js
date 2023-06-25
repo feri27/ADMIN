@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -6,10 +6,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontSize: {
+        title: `1.6rem;`,
+        paragraph: `1.2rem;`
+      },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+        'Montserrat': ['Montserrat']
       },colors: {
-        cyan: colors.cyan,
+        cyan: colors.blue,
         orange: colors.orange
       }
     },

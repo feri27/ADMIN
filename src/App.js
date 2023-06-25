@@ -6,6 +6,9 @@ import Tables from "./tables/Tables";
 import Formbuilder from "./formbuilder/formbuilder";
 import Documents from "./documents/documents";
 import Client from "./client/client";
+import Addclient from "./addclient/addclient";
+import FormProvider from "./addclient/store/FormProvider";
+import Frmtemplate from "./frmtemplate/frmtemplate";
 
 function App() {
   return (
@@ -28,6 +31,14 @@ function App() {
         </Route>
         <Route path="/client">
           <Client/>
+        </Route>
+        <Route path="/add-client">
+        <FormProvider>
+        <Addclient/>
+        </FormProvider>
+        </Route>
+        <Route path="/template">
+          <Frmtemplate/>
         </Route>
         <Redirect from="/" to="/dashboard" exact />
       </Switch>

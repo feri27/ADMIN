@@ -13,7 +13,7 @@ function Header(props) {
       style={{ height: headerHeight }}
     >
       <img className="w-14 h-14" src={Logo} alt="" />
-      <h2 className="text-cyan-500 text-2xl font-semibold hidden lg:inline">
+      <h2 className="text-blue-700 font-bold text-1xl hidden lg:inline uppercase">
         {props.title}
       </h2>
     </div>
@@ -63,7 +63,7 @@ function SideMenu(props) {
           <MapIcon className={itemIconClass} />
         </MenuItem>
 
-        <MenuItem to="/forms" title="Tempelate" active={location.pathname === '/forms'}>
+        <MenuItem to="/template" title="Tempelate" active={location.pathname === '/template'}>
           <DocumentIcon className={itemIconClass} />
         </MenuItem>
 
