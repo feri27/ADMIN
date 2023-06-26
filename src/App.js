@@ -73,6 +73,10 @@ function App() {
         <Team/>
       </Route>
 
+      <Route path="/inspection">
+        <Allinspection/>
+      </Route>
+
       <Redirect from="/" to="/login" exact />
      
     </Switch>

@@ -55,6 +55,10 @@ function SideMenu(props) {
           <HomeIcon className={itemIconClass} />
         </MenuItem>
 
+        <MenuItem to="/inspection" title="Inspection" active={location.pathname === '/inspection'}>
+          <DocumentTextIcon className={itemIconClass} />
+        </MenuItem>
+
         <MenuItem to="/client" title="Clients" active={location.pathname === '/client'}>
           <UserIcon className={itemIconClass} />
         </MenuItem>
