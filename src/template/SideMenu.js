@@ -67,20 +67,20 @@ function SideMenu(props) {
           <DocumentIcon className={itemIconClass} />
         </MenuItem>
 
-        <MenuItem to="/forms" title="Contacts" active={location.pathname === '/forms'}>
+        <MenuItem to="/contact" title="Contacts" active={location.pathname === '/contact'}>
           <IdentificationIcon className={itemIconClass} />
         </MenuItem>
 
-        <MenuItem to="/forms" title="Team" active={location.pathname === '/forms'}>
+        <MenuItem to="/team" title="Team" active={location.pathname === '/team'}>
           <UserGroupIcon className={itemIconClass} />
         </MenuItem>
         
-        <MenuItem to="/forms" title="Forms" active={location.pathname === '/forms'}>
+        {/* <MenuItem to="/forms" title="Forms" active={location.pathname === '/forms'}>
           <DocumentTextIcon className={itemIconClass} />
         </MenuItem>
         <MenuItem to="/tables" title="Tables" active={location.pathname === '/tables'}>
           <TableIcon className={itemIconClass} />
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem to="/builder" title="Formulir" active={location.pathname === '/builder'}>
           <DocumentAddIcon className={itemIconClass} />
         </MenuItem>
@@ -89,7 +89,7 @@ function SideMenu(props) {
           <span className="my-3 lg:my-5 border-b border-white block"></span>
         </div>
 
-        <MenuItem to="/" title="Settings">
+        <MenuItem to="/forms" title="Settings">
           <CogIcon className={itemIconClass} />
         </MenuItem>
         <MenuItem to="/forms" title="Licences" active={location.pathname === '/forms'}>

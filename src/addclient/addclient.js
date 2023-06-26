@@ -10,6 +10,8 @@ import Client from "./page/client.js"
 import Document from "./page/documents"
 import PaginateBar from "./page/paginateBar";
 import Contact from "./page/contact";
+import Clientassets from "./page/clientassets";
+import Assetitem from "./page/assetitem";
 
 function Addclient() {
   const {
@@ -49,11 +51,13 @@ function Addclient() {
         {page === 1 && <Client />}
         {page === 2 && <Document/>}
         {page === 3 && <Contact/>}
+        {page === 4 && <Clientassets/>}
+        {page === 5 && <Assetitem/>}
 
 
         <div className="flex flex-row-reverse rounded-b-md px-5 py-4">
                 <button className="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md" onClick={pageSet}>
-                {page === 4 ? `Submit` : <i className="fa fa-arrow-right"></i>}
+                {page === 6 ? `Submit` : <i className="fa fa-arrow-right"></i>}
             </button>
             </div>
 

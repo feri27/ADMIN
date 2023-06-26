@@ -63,7 +63,7 @@ function PieChart() {
 
   return (
     <div className="bg-white rounded-md shadow p-5">
-      <div className="text-xl text-gray-600  font-semibold">Percentage of Inspections completed</div>
+      <div className="text-xl text-gray-600 mb-3  font-semibold">Percentage of Inspections completed</div>
       <div className="">
         <canvas ref={chartContainer} />
       </div>

@@ -21,19 +21,9 @@ function TableRow({ data }) {
   // if (data.status === "angry") {
   // //   statusClass = " bg-red-100 text-red-700";
   // }
-
-  const history = useHistory();
-
   return (
     <>
       <tr>
-        <td onClick={() => toggle()}>
-          {show ? (
-            <i className="fa fa-minus-circle text-yellow-400 ml-4"></i>
-          ) : (
-            <i className="fa fa fa-plus-circle ml-4"></i>
-          )}
-        </td>
         <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm">
           {data.client_name}
         </td>
@@ -66,23 +56,28 @@ function TableRow({ data }) {
           {data.role}
         </td> */}
         <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm font-medium">
-          <button  onClick={() => history.push("/add-client")} className="bg-blue-500 px-3 py-2 mx-1 rounded text-white hover:bg-blue-900">
+          <a
+            href="!#"
+            className="bg-blue-500 px-3 py-2 mx-1 rounded text-white hover:bg-blue-900"
+          >
             <i className="fa fa-pencil"></i>
-          </button>
-          <button
-            onClick={() => history.push("/clientdetail")}
+          </a>
+          <a
+            href="!#"
             className="bg-green-500 px-3 py-2 mx-1 rounded text-white hover:bg-green-900"
           >
             <i className="fa fa-eye"></i>
-          </button>
-          <button className="bg-red-500  px-3 py-2 mx-1 rounded text-white hover:bg-red-900">
+          </a>
+          <a
+            href="!#"
+            className="bg-red-500  px-3 py-2 mx-1 rounded text-white hover:bg-red-900"
+          >
             <i className="fa fa-times"></i>
-          </button>
+          </a>
         </td>
       </tr>
       {show ? (
         <tr>
-          <td></td>
           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
             <di className="flax flex-row">
               <label className="font-black text-blue-600" htmlFor="title">
@@ -124,7 +119,7 @@ function TableRow({ data }) {
   );
 }
 
-function Client() {
+function Clientcontact() {
   const users = [
     {
       client_name: "Hotel California",
@@ -149,29 +144,28 @@ function Client() {
     <div className="flex flex-col space-y-2 bg-gray-50 rounded px-4 r py-4">
       <div className="flex flex-row px-1 py-4 justify-between items-baseline ">
         <button
-          onClick={() => history.push("/add-client")}
+          
           type="submit"
           className="float-right  text-cyan-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
         >
-          <i className="fa fa-plus"></i> Add client
+          <i className="fa fa-plus"></i> Add Contact
         </button>
 
         <div className="hidden md:inline-flex flex-1">
           <input
             type="text"
             className="lg:w-1/3 border  border-gray-300 rounded font-light focus:ring-0 focus:border-cyan-500"
-            placeholder="Search Client .."
+            placeholder="Search Contact .."
           />
         </div>
 
-        <h4 className="font-medium text-cyan-900 py-1">Client overview</h4>
+        <h4 className="font-medium text-cyan-900 py-1">Location overview</h4>
       </div>
       <div className="shadow ounded-b-md overflow-x-auto rounded-md">
         <table className="min-w-full divide-y">
           <thead className="bg-gray-100">
             <tr>
-              <th></th>
-              <TableHeader title="Client Name" />
+              <TableHeader title="Location Name" />
               <TableHeader title="Parent Client" />
               <TableHeader title="Phone" />
               <TableHeader title="Address" />
@@ -211,4 +205,4 @@ function Client() {
   );
 }
 
-export default Client;
+export default Clientcontact;

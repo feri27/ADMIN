@@ -35,7 +35,7 @@ function FormProvider({ children }) {
   const initialValue = {
     formData,
     page,
-    numOfPages: 4,
+    numOfPages: 6,
     finalData,
     validation,
     setCurrentPage,

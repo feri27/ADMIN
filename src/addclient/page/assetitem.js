@@ -91,7 +91,7 @@ function SimpleCheckbox({ title, desc }) {
   );
 }
 
-function Contact() {
+function Assetitem() {
 
   const [documents,setDocuments] =useState([])
 
@@ -123,26 +123,21 @@ function Contact() {
               <table class="border-collapse border border-slate-400 w-full">
               <thead>
               <tr>
-                <th colSpan={6} class="border text-left px-4 bg-blue-100 text-blue-900 border-slate-300 py-4">CONTACTS</th>
+                <th colSpan={6} class="border text-left px-4 bg-blue-100 text-blue-900 border-slate-300 py-4">ASSETS</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td class="border border-slate-300 px-4 py-4">
-                <InputLabel title="Contact Name" />
+                <InputLabel title="Assets Name" />
                 </td>
                 <td class="border border-slate-300 px-4">
-                <InputLabel title="Occupation/Title" />
+                <InputLabel title="Assets Type" />
                 </td>
                 <td class="border border-slate-300 px-4">
-                <InputLabel title="Phone" />
+                <InputLabel title="Assets Number" />
                 </td>
-                <td class="border border-slate-300 px-4">
-                <InputLabel title="Email" />
-                </td>
-                <td class="border border-slate-300 px-4">
-                <InputLabel title="Primary" />
-                </td>
+                
                 <td onClick={() => addOption()} class="border border-slate-300 px-4">
                 <i className='fa fa-circle-plus text-blue-700'></i><label className="text-sm ml-1 items-center">Add</label>
                 </td>
@@ -156,17 +151,12 @@ function Contact() {
                 <SimpleInput type="text" placeholder="Name" />
                 </td>
                 <td class="border border-slate-300 px-4">
-                <SimpleInput type="text" placeholder="Title" />
+                <SimpleInput type="text" placeholder="Type" />
                 </td>
                 <td class="border border-slate-300 px-4">
                 <SimpleInput type="text" placeholder="...." />
                 </td>
-                <td class="border border-slate-300 px-4">
-                <SimpleInput type="text" placeholder="...." />
-                </td>
-                <td class="border border-slate-300 px-4">
-                <SimpleCheckbox title="" />
-                </td>
+               
                 <td onClick={() => removeOption(index)} class="border border-slate-300 px-4">
                 <i className='fa fa-times text-red-700'></i>
                 </td>
@@ -183,4 +173,4 @@ function Contact() {
             </div>
   );
 }
-export default Contact;
+export default Assetitem;
