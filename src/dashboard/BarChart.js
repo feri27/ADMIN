@@ -56,7 +56,7 @@ function BarChart() {
 
   return (
     <div className="bg-white rounded-md shadow p-5">
-      <div className="text-xl text-gray-600 mb-3 font-semibold">Monthly</div>
+      <div className="text-xl text-gray-600 mb-3 font-semibold">Total inspections by type</div>
       <div className="">
         <canvas ref={chartContainer} />
       </div>
