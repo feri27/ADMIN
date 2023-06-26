@@ -23,6 +23,9 @@ function TableHeader({ title }) {
     // if (data.status === "angry") {
     // //   statusClass = " bg-red-100 text-red-700";
     // }
+
+    const history = useHistory();
+
     return (
       <>
       <tr>
@@ -47,15 +50,15 @@ function TableHeader({ title }) {
           {data.role}
         </td> */}
         <td className="border border-slate-300 px-6 py-4 whitespace-nowrap text-sm font-medium">
-          <a href="!#" className="bg-blue-500 px-3 py-2 mx-1 rounded text-white hover:bg-blue-900">
+          <button className="bg-blue-500 px-3 py-2 mx-1 rounded text-white hover:bg-blue-900">
           <i className="fa fa-pencil"></i>
-          </a>
-          <a href="!#" className="bg-green-500 px-3 py-2 mx-1 rounded text-white hover:bg-green-900">
+          </button>
+          <button onClick={()=> history.push("/clientdetail")} className="bg-green-500 px-3 py-2 mx-1 rounded text-white hover:bg-green-900">
           <i className="fa fa-eye"></i>
-          </a>
-          <a href="!#" className="bg-red-500  px-3 py-2 mx-1 rounded text-white hover:bg-red-900">
+          </button>
+          <button className="bg-red-500  px-3 py-2 mx-1 rounded text-white hover:bg-red-900">
           <i className="fa fa-times"></i>
-          </a>
+          </button>
         </td>
       </tr>
       {show? <tr>
