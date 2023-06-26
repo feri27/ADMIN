@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function QuickStackCard(props) {
   return (
     <div className="rounded-md shadow bg-white flex flex-col">
-      <div className="flex space-x-4 items-center px-4 py-3">
+      <div className="flex space-x-4 items-center px-3 py-2">
         {props.children}
         <div className="flex flex-col space-y-1">
           <h3 className="font-lg text-gray-500">{props.title}</h3>

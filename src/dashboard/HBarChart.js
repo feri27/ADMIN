@@ -1,53 +1,45 @@
 import { useRef, useState, useEffect } from "react";
 import { Chart } from "chart.js";
 
-const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const labels = ["Follow-Up", "Notice", "Rejected", "No Action"];
 const data = {
   labels: labels,
   datasets: [
     {
-      backgroundColor: "rgba(99, 102, 241, 0.1)",
+      backgroundColor: "rgba(99, 102, 241, 1)",
+      hoverBackgroundColor: "rgba(67, 56, 202, 1)",
       borderColor: "rgb(99, 102, 241)",
-      pointBackgroundColor: "rgb(99, 102, 241)",
-      data: [0, 10, 5, 2, 20, 30, 45],
-      tension: 0.3,
+      data: [10, 10, 15, 20],
       fill: true,
-    },
-    {
-      backgroundColor: "rgba(99, 102, 241, 0.1)",
-      borderColor: "#FF8C00)",
-      pointBackgroundColor: "#FF8C00)",
-      data: [8, 15, 9, 20, 25, 33, 40],
-      tension: 0.3,
-      fill: true,
+      label: 'Dataset',
     },
   ],
 };
 
 const chartConfig = {
-  type: "line",
+  type: "bar",
   data: data,
   options: {
-    maintainAspectRatio: true,
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 2,
+      }
+    },
+    responsive: true,
     plugins: {
       legend: {
-        display: false,
+        position: 'right',
       },
-    },
-    scales: {
-      x: {
-        grid: {
-          drawTicks: false,
-        },
-        ticks: {
-            padding: 8
-        }
-      },
-    },
+      title: {
+        display: true,
+        text: ''
+      }
+    }
   },
 };
 
-function LineChart() {
+function HBarChart() {
   const chartContainer = useRef(null);
   const [, setChart] = useState(null);
 
@@ -65,7 +57,7 @@ function LineChart() {
 
   return (
     <div className="bg-white rounded-md shadow p-5">
-      <div className="text-xl text-gray-600 mb-3 font-semibold">Total Inspections/Total Permit</div>
+      <div className="text-xl text-gray-600 mb-3 font-semibold">Number of Inspections by Action Type</div>
       <div className="">
         <canvas ref={chartContainer} />
       </div>
@@ -73,4 +65,4 @@ function LineChart() {
   );
 }
 
-export default LineChart;
+export default HBarChart;
