@@ -59,7 +59,7 @@ function SideMenu(props) {
           <UserIcon className={itemIconClass} />
         </MenuItem>
 
-        <MenuItem to="/forms" title="Location" active={location.pathname === '/forms'}>
+        <MenuItem to="/location" title="Location" active={location.pathname === '/location'}>
           <MapIcon className={itemIconClass} />
         </MenuItem>
 
