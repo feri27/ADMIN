@@ -9,7 +9,7 @@ import Client from "./client/client";
 import Addclient from "./addclient/addclient";
 import FormProvider from "./addclient/store/FormProvider";
 import Frmtemplate from "./frmtemplate/frmtemplate";
-import Clientdetail from "./clientdetail/clientdetail";
+import Location from "./location/location";
 
 function App() {
   return (
@@ -41,8 +41,8 @@ function App() {
         <Route path="/template">
           <Frmtemplate/>
         </Route>
-        <Route path="/clientdetail">
-          <Clientdetail/>
+        <Route path="/location">
+          <Location/>
         </Route>
         <Redirect from="/" to="/dashboard" exact />
       </Switch>

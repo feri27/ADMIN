@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Chart } from "chart.js";
 
-const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const labels = ["Location", "Equipment", "Restaurant", "Hotel","Car"];
 const data = {
   labels: labels,
   datasets: [
@@ -9,7 +9,7 @@ const data = {
       backgroundColor: "rgba(99, 102, 241, 1)",
       hoverBackgroundColor: "rgba(67, 56, 202, 1)",
       borderColor: "rgb(99, 102, 241)",
-      data: [10, 10, 15, 20, 40, 30, 45, 20, 30, 55, 35, 60,],
+      data: [10, 10, 15, 20,15],
       fill: true,
     },
   ],
@@ -56,7 +56,7 @@ function BarChart() {
 
   return (
     <div className="bg-white rounded-md shadow p-5">
-      <div className="text-xl text-gray-600 mb-3 font-semibold">Monthly</div>
+      <div className="text-xl text-gray-600 mb-3 font-semibold">Total inspections by type</div>
       <div className="">
         <canvas ref={chartContainer} />
       </div>
